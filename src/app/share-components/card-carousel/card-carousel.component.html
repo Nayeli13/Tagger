@@ -1,0 +1,21 @@
+<div class="row" *ngIf="codes.length > 0">
+  <div class="col-md-4"
+    *ngFor="let item of codes | paginate: {itemsPerPage: 3, currentPage: page, id:id}">
+    <mat-card class="article-cards">
+      <mat-card-header class="card-header">
+        <mat-card-title>{{item}}</mat-card-title>
+        <mat-card-subtitle>articulo</mat-card-subtitle>
+      </mat-card-header>
+
+      <mat-card-content class="card-content text-center">
+        <div class="d-flex justify-content-center">
+          <img mat-card-image class="card-image mt-3" src="../../../../assets/images/package.png"
+            alt="Photo of a Shiba Inu">
+        </div>
+        <p> Este articulo se encuentra disponible en todas nuestras tiendas</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <pagination-controls previousLabel="Anterior"
+  nextLabel="Siguiente" [id]="id" (pageChange)="page = $event"></pagination-controls>
+</div>

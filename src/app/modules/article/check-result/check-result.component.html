@@ -1,0 +1,23 @@
+<mat-tab-group class="check-result " mat-align-tabs="start">
+  
+  <mat-tab label="ARTÍCULOS VÁLIDOS">
+    <app-card-carousel [totalItems]="checkResult.validArticles.length" [id]="'validArticles'"[codes]="checkResult.validArticles"></app-card-carousel>
+    <div class="text-center" *ngIf="checkResult.validArticles.length === 0">
+      <div class="d-flex justify-content-center">
+        <img class="error-image" src="../../../../assets/images/20943865.jpg" alt="">
+      </div>
+      <h3 class="error-mensagge">No se encontraron articulos validos en la busqueda.</h3>
+    </div>
+  </mat-tab>
+  
+  <mat-tab label="ARTÍCULOS INVÁLIDOS">
+    <app-card-carousel [totalItems]="checkResult.invalidArticles.length" [id]="'invalidArticles'"[codes]="checkResult.invalidArticles"></app-card-carousel>
+    <div class="text-center" *ngIf="checkResult.invalidArticles.length === 0">
+      <div class="d-flex justify-content-center">
+        <img class="error-image" src="../../../../assets/images/20943865.jpg" alt="">
+      </div>
+      <h3 class="error-mensagge">No se encontraron articulos invalidos en la busqueda.</h3>
+    </div>
+  </mat-tab>
+
+</mat-tab-group>

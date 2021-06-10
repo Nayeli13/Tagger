@@ -1,0 +1,36 @@
+mat-tab-group{
+    &.check-result{
+        mat-card{
+            &.article-cards{
+                width: 300px;
+                height: 270px !important;
+                margin: 30px;
+                padding: 0px;
+            }
+            mat-card-header{
+                &.card-header{
+                    background-color: #e0eef9e3;
+                    padding: 15px;
+                }
+            }
+            mat-card-content{
+                &.card-content{
+                    padding: 15px;
+                    img.card-image{
+                        width: 77px;
+                        height: 83px;
+                    }
+                }
+            }
+           
+        }
+        .error-mensagge{
+            font-size: 28px;
+            color: #f44336;
+            font-family: emoji;
+        }
+        .error-image{
+            width: 288px;
+        }
+    }
+}

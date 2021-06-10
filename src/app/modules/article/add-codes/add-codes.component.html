@@ -1,0 +1,23 @@
+
+<div class="seeker-container">
+    <mat-label class="seeker-title">
+        <span matBadge="¡" matBadgeOverlap="false" matTooltipClass="tool-tip-info" [matTooltipPosition]="'right'" matTooltip="Separe los codigos por coma">Añadir Articulos por codigo</span></mat-label>
+    <br><br>
+    <div class="seeker">
+        <input matInput class="code mat-elevation-z1" type="text" [formControl]="codesEntered">
+        <button mat-raised-button placeholder="Ej.: 12345678, 87654321" color="primary" (click)="processCodes()">Añadir</button>
+        <button mat-icon-button *ngIf="searchStatus" matTooltipClass="clear-tool-tip" matTooltip="Limpiar el campo de texto" (click)="resetCodes(true)" class="trash" color="accent" aria-label="Example icon button with a menu icon">
+            <img class="trash-icon" src="../../../../assets/images/trash.svg" alt="">
+        </button>
+    </div>
+    <div *ngIf="articleCodes.invalid" class="pt-3">
+        <div *ngFor="let error of codeErrors">
+            <mat-error>{{error}}</mat-error>
+        </div>
+    </div>
+</div>
+
+
+
+
+  
